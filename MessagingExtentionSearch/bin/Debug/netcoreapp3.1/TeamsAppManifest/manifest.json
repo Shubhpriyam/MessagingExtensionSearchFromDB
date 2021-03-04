@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0",
+  "id": "cad35b6c-bdaf-4583-8e19-a680cc500b06",
+  "packageName": "com.microsoft.teams.samples.searchExtension",
+  "developer": {
+    "name": "Microsoft Corp",
+    "websiteUrl": "https://example.azurewebsites.net",
+    "privacyUrl": "https://example.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
+  },
+  "name": {
+    "short": "search-extension-Name-Data",
+    "full": "Microsoft Teams V4 Search Messaging Extension Bot and settings"
+  },
+  "description": {
+    "short": "Microsoft Teams V4 Search Messaging Extension Bot and settings",
+    "full": "Sample Search Messaging Extension Bot using V4 Bot Builder SDK and V4 Microsoft Teams Extension SDK"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#abcdef",
+  "composeExtensions": [
+    {
+      "botId": "cad35b6c-bdaf-4583-8e19-a680cc500b06",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "searchName",
+          "context": [ "compose", "commandBox" ],
+          "description": "database",
+          "title": "Search",
+          "type": "query",
+          "parameters": [
+            {
+              "name": "searchName",
+              "title": "Search Name",
+              "description": "Ente Employee name",
+              "inputType": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
